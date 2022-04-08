@@ -1,0 +1,82 @@
+:root {
+  --fondo: #f2f2f2;
+}
+
+/* eso se usa para resetear el margen, relleno etc de nuestra pagina y poder modificarlo a gusto*/
+
+* {
+  margin: 0; /*reseteamos margen a 0*/
+  padding: 0; /*reseteamos relleno a 0*/
+  box-sizing: border-box; /*define como la anchura y altura de un elemento son calculados y si incluyen relleno, bordes etc*/
+  /*border-box la anchura y altura incluyen contenido, relleno y bordes*/
+}
+
+/* Header */
+
+header {
+  width: 100%;
+  height: 600px;
+  background: url(../images/fondo.jpg); /*imagen de fondo*/
+  background-attachment: fixed; /*establece si la imagen de fondo se desplaza con el resto de la pagina o si se queda fija(fixed) en este caso se  ve el efecto de que la imagen se queda debido a que esta fija*/
+  background-position: center; /*establece la posicion de partida de la imagen de fondo*/
+  background-size: cover; /*especifica el tamaño de la imagen de fondo es este caso cover hace que la imagen cubra todo el fonfo asi esta sea mas pequeña*/
+}
+
+/*caracteristicas del conjunto de links*/
+nav {
+  width: 100%; /*establecemos el ancho del contenido de nav en este caso con porcentaje del 100% para que se anche en toda la pantalla*/
+  position: fixed; /*establecemos el metodo de posicion del nav en este caso fixed para que se mueva con la pagina*/
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5); /*adjunta una o mas sombras a un elemento */
+}
+
+.nav1 {
+  background: var(
+    --fondo
+  ); /*se establece el color de fondo a traves de la variable --fondo*/
+  height: 100px;
+  color: #000;
+}
+
+.contenedor-nav {
+  /*aqui se va a modificar los elementos dentro de la clase contenedor-nav osea el conjunto de links*/
+  display: flex; /*especifica el comportamiento de de visualizacion de un elemento en este caso flex significa que es flexible a nivel de bloque*/
+  margin: auto; /*centra los elementos de la caja gracias a auto,pero tambien se puden poner valores en pixeles para ubicarlos en un punto deseado*/
+  width: 100%; /*establece el ancho de la caja puede ser en %, px, auto etc. en este caso sera el nivel de separacion de los elementos dentro de la caja osea un 90% para que no queden pegadas de los bordes*/
+  justify-content: space-between; /*alinea los elementos de la caja cuando los elementos no usan todo el espacio disponible en el eje pricipal*/
+  max-width: 1000px; /*define el ancho maximo del elemento (If the content is larger than the maximum width, it will automatically change the height of the element.) en este caso le ponemos mil para que no ocupe toda la pantalla*/
+  height: inherit; /*hereda la altura de su elemento padre*/
+  align-items: center; /*establece el alineado por default a un conjunto de items dentro de un contenedor y le ponemos center para que se ubique en todo el centro del recuadro osea se alineen verticalmente*/
+  overflow: hidden; /*especifica que debe pasar si el contenido desborda el contenedor o su caja*/
+}
+
+nav .enlaces a {
+  /*se usa para editar los elementos de tipo 'a' osea los links del encabezado*/
+  display: inline-block; /*inline-block muestra un elemento como un contenedor de bloque a nivel de linea lo cual permite usar padding*/
+  padding: 5px 0; /*(relleno) se usa para generar espacio alrededor del contenido de un elemento dentro de unos bordes definidos, 5px es la altura y 0 el ancho */
+  margin-right: 17px; /*se establece la margen derecha a 17 px osea el espacio entre elementos*/
+  font-size: 17px; /*se establece el tamaño de la fuente(px,large,%) en este caso son 17 pixeles para que coincida con la margen*/
+  font-weight: 300; /*establece como de grueso o delgado son los caracteres en el texto que va a ser desplegado en este caso los valores van desde 100 hasta 700 dnde 400 es normal y 700 es negrilla, pero tambien se puede usar(normal,bold.bolder etc)*/
+  text-decoration: none; /*establece la decoracion para el texto, la cual puede ser subryayado, color, estilo etc.*/
+  border-bottom: 3px solid transparent; /*borde inferior se establece su tamaño, que sea solido para que se vea linea recta y transparente(para que no se muestre hasta que pase el clic) */
+  color: inherit; /*el color de los enlaces los va a heredar de su padre ya sea nav2 o nav1*/
+}
+
+nav .enlaces a:hover {
+  /*el hover nos permite darle caracteristicas en estos casos a los a(hipervinculos) cuando pasamos el mouse sobre ellos*/
+  border-bottom: 3px solid #1498a4; /*le ponemos el color que se debe poner cuando pasemos el mouse sobre ellos y las mismas caracteristicas de arriba*/
+  transition: 0.6s; /*le damos el tiempo de transicion osea para que aparezca, tambien se puede especificar que se anche o asi pero no lo ponemos*/
+}
+
+.textos {
+  /*modificamos los textos principales del del encabezado*/
+  color: #fff;
+  width: 100%; /*ancho del 100% para que se centre y no hallan saltos de linea*/
+  height: 100%; /*alto del 100% para que quede centrado junto con align items*/
+  display: flex; /*flexible*/
+  align-items: center;
+  justify-content: center;
+  flex-direction: column; /*especifica la direccion de los elementos flexibles en este caso como columnas osea uno debajo del otro o puede ser como filas(row)*/
+  overflow: hidden;
+  text-align: center; /*se especifica el alineamiento horizontal del texto*/
+  font-size: 50px;
+}
