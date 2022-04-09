@@ -4,9 +4,225 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Historia</title>
+    <link rel="stylesheet" href="../styles/styles.css" />
   </head>
   <body>
-    <h1>Historia</h1>
+    <header>
+      <nav class="nav1">
+        <div class="contenedor-nav">
+          <div class="logo" id="logo">
+            <a href="../index.html"><h1>Amsterdam</h1></a>
+          </div>
+          <div class="enlaces">
+            <!--el 'a' define un hipervinculo que es usando para linkear a otro pagina-->
+          <a href="historia.html" id="enlace-dragon" class="btn-header"
+          >Historia</a
+          >
+          <a href="ubicacion.html" id="enlace-inicio" class="btn-header"
+            >Ubicación</a
+          >
+          <a href="poblacion.html" id="enlace-falcon9" class="btn-header"
+            >Poblacion</a
+          >
+          <a
+            href="actividades.html"
+            id="enlace-falconheavy"
+            class="btn-header"
+            >Actividades</a
+          >
+          <a
+            href="referencias.html"
+            id="enlace-falconheavy"
+            class="btn-header"
+            >Referencias</a
+          >
+          </div>
+        </div>
+      </nav>
+      <div class="textos">
+        <!--caja contenedora con clase textos para despues cambiar su formato con css con este nombre-->
+        <h1>Historia</h1>
+        <p>Ámsterdam surgió, como todas las ciudades que a lo largo de la historia se han desarrollado a la orilla del mar, de un pequeño pueblo de pescadores.</p>
+      </div>
+    </header>
+
+    <main>
+      <section class="history contenedor">
+        <div class="lateral-nav">
+          <!-- Lista de elementos de la barra lateral -->
+          <ul class="list-lateral">
+            <!-- Definimos los elementos de la barra lateral -->
+            <li class="list-lateral-item">
+              <a href="#war">Guerra de los ochenta años</a>
+            </li>
+            <li class="list-lateral-item">
+              <a href="#gold">Siglo de oro</a>
+            </li>
+            <li class="list-lateral-item">
+              <a href="#capital">Capital</a>
+            </li>
+            <li class="list-lateral-item">
+              <a
+                href="https://www.holland.com/es/turista/destinos/amsterdam.htm"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Conoce más
+              </a>
+            </li>
+          </ul>
+        </div>
+        
+        <h3>Historia de Amsterdam</h3>
+        <p>
+          En el siglo XII, la construcción de un dique (dam) sobre el río Amstel dió nombre al poblado allí asentado: Amsteldam. En 1358 formó parte de la Liga Hanseática y empezó a destacar como centro comercial en el norte de Europa. Carlos V de España heredó los Países Bajos de su abuela María, de la Casa Ducal de Borgoña. La dependencia de España y el descubrimiento del Nuevo Mundo abrieron nuevas oportunidades a Ámsterdam, que se convirtió, tras Lisboa, en el puerto más importante del mundo.Se especializó en el comercio de granos y de armamento y fue sede de la reventa de las especias procedentes de la India, tras abrir el rey de Portugal una delegación en la ciudad.
+        </p>
+        <div class="war">
+          <br>
+          <a name="war"></a>
+          <h2>La Guerra de los Ochenta años</h2>
+          <br />
+          <!-- Imagen -->
+          <img
+            class="left-image"
+            src="../images/war.jpg"
+            alt="Munich Shield"
+            height="125px"
+          />
+          <!-- Texto -->
+          <p>
+            En 1578, Ámsterdam se unió a la guerra contra España. Las causas de la revuelta contra las tropas españolas del rey Felipe II fueron la lucha por la libertad religiosa, la defensa de los privilegios de las clases dominantes y el creciente nacionalismo; unido al malestar creado por la represión llevada a cabo por el Duque de Alba y por la imposición de nuevos impuestos como el Centésimo y la Alcabala.
+          </p>
+          <br>
+
+          <a name="gold"></a>
+          <h2>El Primer siglo de Oro</h2>
+          <br />
+          <!-- Texto -->
+          <img
+          class="right-image"
+          src="../images/siglo.jpg"
+          alt="Alemania"
+          height="125px"
+          />
+          <p>
+            El siglo XVII se considera el Primer Siglo de Oro de Ámsterdam. En esta época se construyó el Ayuntamiento de la Plaza de Dam y la ciudad fue residencia de intelectuales y artistas que, huyendo de las guerras que asolaban Europa, se refugiaron en la próspera ciudad: Rembrandt, Spinoza, Descartes.
+          </p>
+          <br>
+          <!-- Imagen -->
+          <br />
+
+          <a name="capital"></a>
+          <h2>Ámsterdam capital de los Países Bajos</h2>
+          <br />
+          <!-- Texto -->
+          <img
+          class="left-image"
+          src="../images/capital.jpg"
+          alt="Alemania"
+          height="125px"
+        />
+          <p>
+            En 1810 Napoleón invadió los Países Bajos y Ámsterdam se convirtió en su capital. La invasión afectó a su comercio que lo pagó muy caro por el bloqueo internacional. Tras la derrota de las tropas francesas, el Congreso de Viena de 1815, crea el nuevo Reino Unido de los Países Bajos, que incorporó a Bélgica y Luxemburgo. Ámsterdam se mantuvo como capital del nuevo país.
+
+            En 1830, los belgas se rebelaron y lograron la independencia. Poco después, Luxemburgo haría lo mismo.
+          </p>
+          <br>
+          <!-- Imagen -->
+          <br />
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer__addr">
+        <h1 class="footer__logo">About me</h1>
+            
+        <h2>Información personal</h2>
+        
+        <address>
+          Juan Pablo Carmona Muñoz. Ingeniera de sistemas y computación<br>
+              
+          <a class="footer__btn" href="mailto:example@gmail.com">Email Us</a>
+        </address>
+      </div>
+      
+      <ul class="footer__nav">
+        <li class="nav__item">
+          <h2 class="nav__title">Media</h2>
+    
+          <ul class="nav__ul">
+            <li>
+              <a href="#">Online</a>
+            </li>
+    
+            <li>
+              <a href="#">Print</a>
+            </li>
+                
+            <li>
+              <a href="#">Alternative Ads</a>
+            </li>
+          </ul>
+        </li>
+        
+        <li class="nav__item nav__item--extra">
+          <h2 class="nav__title">Technology</h2>
+          
+          <ul class="nav__ul nav__ul--extra">
+            <li>
+              <a href="#">Hardware Design</a>
+            </li>
+            
+            <li>
+              <a href="#">Software Design</a>
+            </li>
+            
+            <li>
+              <a href="#">Digital Signage</a>
+            </li>
+            
+            <li>
+              <a href="#">Automation</a>
+            </li>
+            
+            <li>
+              <a href="#">Artificial Intelligence</a>
+            </li>
+            
+            <li>
+              <a href="#">IoT</a>
+            </li>
+          </ul>
+        </li>
+        
+        <li class="nav__item">
+          <h2 class="nav__title">Legal</h2>
+          
+          <ul class="nav__ul">
+            <li>
+              <a href="#">Privacy Policy</a>
+            </li>
+            
+            <li>
+              <a href="#">Terms of Use</a>
+            </li>
+            
+            <li>
+              <a href="#">Sitemap</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+      
+      <div class="legal">
+        <p>&copy; 2022 Todos los derechos reservados.</p>
+        
+        <div class="legal__links">
+          <span>Made with <span class="heart">♥</span> remotely from Anywhere</span>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
