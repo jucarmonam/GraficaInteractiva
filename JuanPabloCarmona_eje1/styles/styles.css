@@ -1,12 +1,12 @@
 :root {
-  --color1: rgb(219,144,.5);
-  --color2: rgba(23, 180, 83,0.877);
-  --color3: rgba(11,194,211,0.623);
+  --color1: rgb(219, 144, 0.5);
+  --color2: rgba(23, 180, 83, 0.877);
+  --color3: rgba(11, 194, 211, 0.623);
   --fondo: #f2f2f2;
   --titulos: 33px;
   --margenes: 60px;
   --espacios: 10px;
-  --espacios-contenido:45px;
+  --espacios-contenido: 45px;
 }
 
 /* eso se usa para resetear el margen, relleno etc de nuestra pagina y poder modificarlo a gusto*/
@@ -19,7 +19,7 @@
 }
 
 /*aqui ponemos propiedades de las imagenes*/
-img{
+img {
   vertical-align: top; /*alineacion vertical de la imagen en este caso usamos top el cual lo alinea con el elemnto mas alto en la linea*/
 }
 
@@ -28,11 +28,15 @@ img{
 header {
   width: 100%;
   height: 600px;
-  background: linear-gradient(to bottom,      /*se establece una linea gradiente como fondo del encabezado y con el botoom se establece que va de arriba hacia abajo*/
-    rgba(10,10,10, .6),      /*rgba especifica los colores del rgb, pero ademas da una opacidad en su ultimo valor entre 0.0 y 1.0*/
-    rgba(10,10,10, .6),
-    rgba(10,10,10, .45)
-    ), url(../images/fondo.jpg); /*imagen de fondo*/
+  background: linear-gradient(
+      to bottom,
+      /*se establece una linea gradiente como fondo del encabezado y con el botoom se establece que va de arriba hacia abajo*/
+        rgba(10, 10, 10, 0.6),
+      /*rgba especifica los colores del rgb, pero ademas da una opacidad en su ultimo valor entre 0.0 y 1.0*/
+        rgba(10, 10, 10, 0.6),
+      rgba(10, 10, 10, 0.45)
+    ),
+    url(../images/fondo.jpg); /*imagen de fondo*/
   background-attachment: fixed; /*establece si la imagen de fondo se desplaza con el resto de la pagina o si se queda fija(fixed) en este caso se  ve el efecto de que la imagen se queda debido a que esta fija*/
   background-position: center; /*establece la posicion de partida de la imagen de fondo*/
   background-size: cover; /*especifica el tamaño de la imagen de fondo es este caso cover hace que la imagen cubra todo el fonfo asi esta sea mas pequeña*/
@@ -41,7 +45,7 @@ header {
 /*caracteristicas del conjunto de links*/
 nav {
   width: 100%; /*establecemos el ancho del contenido de nav en este caso con porcentaje del 100% para que se anche en toda la pantalla*/
-  /*position: fixed; /*establecemos el metodo de posicion del nav en este caso fixed para que se mueva con la pagina*/
+  position: fixed; /*establecemos el metodo de posicion del nav en este caso fixed para que se mueva con la pagina*/
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5); /*adjunta una o mas sombras a un elemento */
 }
 
@@ -106,74 +110,85 @@ nav .enlaces a:hover {
   width: 70%;
 }
 
-.contenedor{  /*todas las clases de html que tienen contenedor en su nombre le aplicamos lo siguiente*/
-  margin: auto;  /*margin se usa para crear espacio alrededor de elementos y/o fuera de margenes en este caso auto centra horizontalmente los elementos dentro de su contenedor*/
-  padding: var(--margenes) 0;  /*espacio alrededor de los elementos con margenes arriba y abajo y cero hacia los lados*/
+.contenedor {
+  /*todas las clases de html que tienen contenedor en su nombre le aplicamos lo siguiente*/
+  margin: auto; /*margin se usa para crear espacio alrededor de elementos y/o fuera de margenes en este caso auto centra horizontalmente los elementos dentro de su contenedor*/
+  padding: var(--margenes) 0; /*espacio alrededor de los elementos con margenes arriba y abajo y cero hacia los lados*/
   width: 90%; /*del 90% para que no quede tan centrado hacia los lados*/
   max-width: 1000px; /*establecemos el ancho maximo de los elementos en este caso 1000px para que no queden tan grandes*/
   text-align: center; /*centramos todo*/
   overflow: hidden;
 }
 
-.contenedor h3{  /*todos los h3 en clase contenedor*/
-  font-size: var(--titulos);  
+.contenedor h3 {
+  /*todos los h3 en clase contenedor*/
+  font-size: var(--titulos);
   color: var(--color1);
-  margin-bottom: var(--espacios); /*se establece el margen inferior osea el tamaño en este caso 10px */
+  margin-bottom: var(
+    --espacios
+  ); /*se establece el margen inferior osea el tamaño en este caso 10px */
 }
 
-.contenedor p{  /*todos los parrafos*/
+.contenedor p {
+  /*todos los parrafos*/
   font-size: var(--subtitulos);
   font-weight: 300;
   color: var(--color1);
 }
 
-.history p{
+.history p {
   color: black;
   font-size: 25px;
   text-align: justify;
 }
 
-.after{
+.after {
   text-align: center;
   color: var(--color1);
 }
 
-.after::after{ /*en la clase after los dos puntos nos sirven si queremos insertar algo antes o despues de esta clase en este caso (after) osea despues */
-  content: ''; /*se usa desppues de ::after y ::before para insertar contenido generado en este caso al poner '' es para hacer el margen debajo del texto*/
+.after::after {
+  /*en la clase after los dos puntos nos sirven si queremos insertar algo antes o despues de esta clase en este caso (after) osea despues */
+  content: ""; /*se usa desppues de ::after y ::before para insertar contenido generado en este caso al poner '' es para hacer el margen debajo del texto*/
   display: block; /*ponemos una caja despues de la clase after con block que comienza en una nueva linea y toma todo el ancho lo que dara la forma del margen*/
-  margin: auto;   /*se centra la margen*/
-  margin-top: var(--espacios); /*establecemos el margen superior de lo que esta despues de after osea 15px hacia arriba va a estar after*/
-  width: 50px;  /*ancho del margen*/
-  height: 2px;  /*alto del margen o caja*/
-  background: var(--color1);  /*color del margen o caja*/
-  margin-bottom: var(--espacios-contenido);  /*tamaño de margen inferior en px*/
+  margin: auto; /*se centra la margen*/
+  margin-top: var(
+    --espacios
+  ); /*establecemos el margen superior de lo que esta despues de after osea 15px hacia arriba va a estar after*/
+  width: 50px; /*ancho del margen*/
+  height: 2px; /*alto del margen o caja*/
+  background: var(--color1); /*color del margen o caja*/
+  margin-bottom: var(--espacios-contenido); /*tamaño de margen inferior en px*/
 }
 
-.card{  /*modificamos la caja que contiene todas las cartas*/
+.card {
+  /*modificamos la caja que contiene todas las cartas*/
   display: flex;
   justify-content: space-around; /*alinea el contenido flexible con los items que no usan todo el espacio disponible en la horizontal en este caso el around le da espacio al elemento en todo su alrededor*/
   flex-wrap: wrap; /*establece si los elementos flexibles deben ajustarse o no al agrandar el tamaño o algo similar en este caso con wrap(ajustar) si lo hacen*/
 }
 
-.content-card{  /*contenido de las cartas*/
+.content-card {
+  /*contenido de las cartas*/
   width: 31%;
-  box-shadow:  0 0 6px 0 rgba(0,0,0,.5); /*agrega una o mas sombras a un elemento*/
+  box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.5); /*agrega una o mas sombras a un elemento*/
   overflow: hidden;
-  height: 400px;  /*alto del contenido de la carta*/
+  height: 400px; /*alto del contenido de la carta*/
 }
 
-.people{
+.people {
   height: 80%; /*toma el 80% del tamaño con respecto a su padre osea content-card empezando desde arriba o desde donde empieza su padre*/
 }
 
-.content-card img{
-  width: 100%;  /*100% para que tome toda la imagen*/
+.content-card img {
+  width: 100%; /*100% para que tome toda la imagen*/
   height: 100%;
-  object-fit: cover;  /*se especifica como la imagen debe modificar su tamaño para llenar su contenedor en este caso cover rehace su tamaño y mantiene su aspecto*/
+  object-fit: cover; /*se especifica como la imagen debe modificar su tamaño para llenar su contenedor en este caso cover rehace su tamaño y mantiene su aspecto*/
 }
 
-.texto-team{  /*textos de las cartas*/
-  height: 20%;  /*el alto es el 20% con respecto a su padre osea conten-card 400px */
+.texto-team {
+  /*textos de las cartas*/
+  height: 20%; /*el alto es el 20% con respecto a su padre osea conten-card 400px */
   width: 100%;
   padding: var(--espacios) 0; /*puede tener 4 valores los cuales son, alto,derecho,fondo y izquierdo*/
 }
@@ -213,7 +228,6 @@ nav .enlaces a:hover {
   text-align: center;
 }
 
-
 /* Formato general de imagenes a la izquierda */
 .left-image {
   margin-left: 1em;
@@ -228,20 +242,21 @@ nav .enlaces a:hover {
   float: right;
 }
 
-.war h2{
+.war h2 {
   text-align: left;
 }
 
-.container-ubicacion, .container-poblacion {
+.container-ubicacion,
+.container-poblacion {
   font-size: 20px;
 }
 
-.container-ubicacion p{
+.container-ubicacion p {
   color: black;
   text-align: justify;
 }
 
-.container-poblacion p{
+.container-poblacion p {
   color: black;
   text-align: justify;
 }
@@ -255,39 +270,46 @@ nav .enlaces a:hover {
   text-align: center; /* Texto alineado en la mitad*/
 }
 
-.galeria-work{ /*modificamos la parte de las imagenes */
+.galeria-work {
+  /*modificamos la parte de las imagenes */
   display: flex; /*para que me ponga en filas lo que se pueda de la mejor manera*/
   flex-wrap: wrap; /*se ajustan las imagenes para que queden de la mejor manera*/
   justify-content: space-around;
 }
 
-.cont-work{/*los elementos con la clase cont-work osea cada imagen*/
+.cont-work {
+  /*los elementos con la clase cont-work osea cada imagen*/
   width: 31%; /*el ancho perfecto para que me quepan de a 3 cont-work*/
-  box-shadow:  0 0 6px 0 rgba(0,0,0,.5); /*se pone una sombra alrededor para dar la sensacion de estar metido en una caja*/
+  box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.5); /*se pone una sombra alrededor para dar la sensacion de estar metido en una caja*/
   overflow: hidden;
-  height: 300px;  /*alto de la caja*/
+  height: 300px; /*alto de la caja*/
   overflow: hidden;
-  margin-bottom: var(--espacios-contenido); /*espacio entre este elemento y el de debajo*/
+  margin-bottom: var(
+    --espacios-contenido
+  ); /*espacio entre este elemento y el de debajo*/
 }
 
-.img-work{  /*modificamos la clase/caja que contiene a las imagenes*/
+.img-work {
+  /*modificamos la clase/caja que contiene a las imagenes*/
   height: 90%;
   width: 100%;
 }
 
-.img-work img{/*modificamos especificamente la imagen*/
-  height: 100%;  /*100% ambas para que salga toda la imagen*/
+.img-work img {
+  /*modificamos especificamente la imagen*/
+  height: 100%; /*100% ambas para que salga toda la imagen*/
   width: 100%;
-  object-fit: cover;  /*ajusta la imagen a la caja para que no se vea tan apretada*/
+  object-fit: cover; /*ajusta la imagen a la caja para que no se vea tan apretada*/
 }
 
-.textos-work{
+.textos-work {
   height: 10%;
 }
 
-.textos-work h4{  /*modificamos especificamente los h4 de textos-work*/
-  line-height: 30px;  /*especificamos la altura de una linea de texto*/
-  font-weight: 300;   /*grueso*/
+.textos-work h4 {
+  /*modificamos especificamente los h4 de textos-work*/
+  line-height: 30px; /*especificamos la altura de una linea de texto*/
+  font-weight: 300; /*grueso*/
 }
 
 .container-referencias {
@@ -310,7 +332,7 @@ nav .enlaces a:hover {
 }
 
 .footer > * {
-  flex:  1 100%;
+  flex: 1 100%;
 }
 
 .footer__addr {
@@ -370,7 +392,7 @@ nav .enlaces a:hover {
 
 .footer__nav {
   display: flex;
-	flex-flow: row wrap;
+  flex-flow: row wrap;
 }
 
 .footer__nav > * {
@@ -392,7 +414,7 @@ nav .enlaces a:hover {
   flex-wrap: wrap;
   color: #999;
 }
-  
+
 .legal__links {
   display: flex;
   align-items: center;
@@ -420,4 +442,87 @@ nav .enlaces a:hover {
 
 .footer__nav {
   flex: 2 0px;
+}
+
+#menuToggle {
+  display: none;
+}
+
+.menu-icon {
+  display: none;
+}
+
+.menu-icon {
+  cursor: pointer;
+  float: right;
+  padding: auto;
+}
+
+@media screen and (max-width: 700px) {
+  .enlaces {
+    position: fixed; /*ya no se alinea con el flex en este caso flixed lo que hace esque el elemento se posicione relativo al punto de vista de la pagina y hace que siempre este en el mismo sitio sin importar que se haga scroll */
+    top: 100px; /*distancia hacia abajo desde donde empieza en este caso nav 1 tiene una altura de 80px por eso lo ponemos que empiece desde ahi porque ahi acaba nav1*/
+    background: var(--color1); /*le pone color al fondo de los textos*/
+    left: 0; /*lo ponemos todo a la izquierda*/
+    height: 100%; /*hacemos que ocupe toda la pantalla*/
+    transition: 1s;
+    width: 0; /*le ponemos de ancho 0 para que no se vea en principio*/
+    overflow: hidden; /*para que cuando sobrepase sus limites no se vea debido a lo de arriba*/
+  }
+
+  .enlaces a {
+    /*los links de tipo los organizamos uno debajo del otro en el responsive*/
+    display: block; /*con estos dos ponemos uno debajo del otro*/
+    width: 100%; /*con estos dos ponemos uno debajo del otro ya que con este hacemos que ocupe todo el ancho de su padre*/
+    height: 50px;
+    padding: 20px;
+    text-align: center;
+    background: var(--color1); /*fondo de la parte de los elementos de tipo a*/
+    color: #fff;
+  }
+
+  .textos > h1 {
+    font-size: 70px;
+  } /*reducimos el tamaño de los textos para cuando la pantalla sea menor a 700px*/
+  .textos > h2 {
+    font-size: 35px;
+  }
+
+  .content-card {
+    /*reducimos las tarjetas y quedan de a 2 en la horizontal*/
+    width: 48%;
+    margin-bottom: var(--margenes); /*para que no queden muy pegadas*/
+  }
+
+  :root {
+    --margenes: 30px;
+  }
+
+  .menu-icon {
+    width: 100px;
+    height: inherit;
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    line-height: 60px;
+  }
+
+  #menuToggle:checked ~ div {
+    width: 70vw;
+  }
+
+  .menu-icon i {
+    font-size: 1.7em;
+    font-style: normal;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  :root {
+    --espacios-contenido: 25px;
+  }
+  .content-card {
+    width: 90%;
+  }
 }
