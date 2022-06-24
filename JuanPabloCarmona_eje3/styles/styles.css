@@ -66,6 +66,14 @@ nav {
   color: #fff;
 }
 
+.nav2 {
+  background: var(
+    --fondo
+  ); /*se establece el color de fondo a traves de la variable --fondo*/
+  height: 110px;
+  color: var(--color1);
+}
+
 .contenedor-nav {
   /*aqui se va a modificar los elementos dentro de la clase contenedor-nav osea el conjunto de links*/
   display: flex; /*especifica el comportamiento de de visualizacion de un elemento en este caso flex significa que es flexible a nivel de bloque*/

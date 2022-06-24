@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mapa</title>
+    <!-- llama el archivo estilos.css -->
+    <link href="../styles/styles.css" rel="stylesheet" type="text/css" />
+    <script src="../js/phaser.js"></script>
+    <script src="../js/mapaAmsterdam.js"></script>
+  </head>
+  <body>
+    <header>
+      <nav id="nav" class="nav1">
+        <div class="contenedor-nav">
+          <div class="logo" id="logo">
+            <a href="../index.html"><h1>Amsterdam</h1></a>
+          </div>
+          <input type="checkbox" id="menuToggle" />
+          <label for="menuToggle" class="menu-icon"><i>&#9776;</i></label>
+          <div class="enlaces">
+            <!--el 'a' define un hipervinculo que es usando para linkear a otro pagina-->
+            <a href="historia.html" id="enlace-dragon" class="btn-header"
+              >Historia</a
+            >
+            <a href="ubicacion.html" id="enlace-inicio" class="btn-header"
+              >Ubicación</a
+            >
+            <a href="poblacion.html" id="enlace-falcon9" class="btn-header"
+              >Población</a
+            >
+            <a
+              href="actividades.html"
+              id="enlace-falconheavy"
+              class="btn-header"
+              >Actividades</a
+            >
+            <a
+              href="actividades.html"
+              id="enlace-falconheavy"
+              class="btn-header"
+              >Referencias</a
+            >
+            <a href="mapa.html" id="enlace-falconheavy" class="btn-header"
+              >Mapa</a
+            >
+          </div>
+        </div>
+      </nav>
+      <div class="textos">
+        <!--caja contenedora con clase textos para despues cambiar su formato con css con este nombre-->
+        <h1>Amsterdam</h1>
+      </div>
+    </header>
+
+    <!--el main contiene la informacion pricipal de un documento-->
+    <main>
+      <section class="mapa contenedor">
+        <h3>Mapa de la ciudad</h3>
+        <br />
+        <div id="mapaAmsterdam"></div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer__addr">
+        <h1 class="footer__logo">About me</h1>
+
+        <h2>Información personal</h2>
+
+        <address>
+          Juan Pablo Carmona Muñoz. Ingeniera de sistemas y computación<br />
+        </address>
+      </div>
+      <div class="legal">
+        <p>&copy; 2022 Todos los derechos reservados.</p>
+      </div>
+    </footer>
+
+    <script src="../js/jquery.js"></script>
+    <script src="../js/main.js"></script>
+  </body>
+</html>
